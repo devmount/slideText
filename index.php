@@ -107,8 +107,15 @@ class slideText extends Plugin
         list($question, $answere) = $this->makeUserParaArray($value, false, '|');
 
         // handle input
-        if ($question == '') {
-            return $this->_cms_lang->getLanguageValue('error_toclick');
+        if (trim($question) == '') {
+            return $this->throwError(
+                $this->_cms_lang->getLanguageValue('error_toclick')
+            );
+        }
+        if (trim($answere) == '') {
+            return $this->throwError(
+                $this->_cms_lang->getLanguageValue('error_toshow')
+            );
         }
 
         // get conf and set default
@@ -398,6 +405,20 @@ class slideText extends Plugin
         );
     }
 
+    /**
+     * throws styled error message
+     *
+     * @param string $text Content of error message
+     *
+     * @return string HTML content
+     */
+    protected function throwError($text)
+    {
+        return '<div class="' . self::PLUGIN_TITLE . 'Error">'
+            . '<div>' . $this->_cms_lang->getLanguageValue('error') . '</div>'
+            . '<span>' . $text. '</span>'
+            . '</div>';
+    }
 }
 
 ?>
