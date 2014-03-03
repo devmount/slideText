@@ -1,0 +1,1 @@
+error_toclick 	= No text to click has been entered.

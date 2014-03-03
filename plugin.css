@@ -1,0 +1,19 @@
+/*
+	slideText CSS styles
+*/
+
+.question {
+	cursor: pointer;
+	margin-bottom: 5px;
+	color: #000;
+}
+
+.question h3 {
+	color: #000;
+}
+
+.question div {
+	display: none;
+	margin-left: 20px;
+	color: #666;
+}

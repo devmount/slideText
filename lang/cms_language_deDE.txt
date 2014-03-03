@@ -1,0 +1,1 @@
+error_toclick 	= Es wurde kein Text zum Anklicken angegeben!
