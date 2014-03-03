@@ -1,5 +1,9 @@
-placeholder				= Gibt den anzuklickenden Inhalt zurück.
-description				= Generiert Inhalt, der beim Anklicken verborgenen Inhalt ausklappt.<br /><br /><span style='font-weight:bold'>Nutzung:</span><br /><span style='font-family:monospace;margin:3px 3px; background-color:#eee;border:1px dotted #aaa;'>{slideText|toclick|toshow}</span> Fügt den gewünschten Inhalt ein. Dabei bezeichnet <span style="font-style:italic;">toclick</span> den Inhalt, welcher angeklickt und <span style="font-style:italic;">toshow</span> den Inhalt, der aus- bzw. eingeklappt werden soll.<br /><br /><span style='font-weight:bold'>Dokumentation:</span><br />Eine ausführliche Dokumentation ist auf <span style="font-style:italic">www.devmount.de</span> zu finden (siehe obenstehender Link).
-config_duration			= Dauer der Animation in Millisekunden
-config_duration_error	= Bitte eine Zahl zwischen 1 und 9999 eingeben!
-config_easing			= Art der Animation
+placeholder           = Gibt den anzuklickenden Inhalt zurück.
+description           = Generiert Inhalt, der beim Anklicken verborgenen Inhalt ausklappt.<br /><br /><span style='font-weight:bold'>Nutzung:</span><br /><span style='font-family:monospace;margin:3px 3px; background-color:#eee;border:1px dotted #aaa;'>{slideText|toclick|toshow}</span> Fügt den gewünschten Inhalt ein. Dabei bezeichnet <span style="font-style:italic;">toclick</span> den Inhalt, welcher angeklickt und <span style="font-style:italic;">toshow</span> den Inhalt, der aus- bzw. eingeklappt werden soll.<br /><br /><span style='font-weight:bold'>Dokumentation:</span><br />Eine ausführliche Dokumentation ist auf <span style="font-style:italic">www.devmount.de</span> zu finden (siehe obenstehender Link).
+config_duration       = Dauer der Animation in Millisekunden
+config_duration_error = Bitte eine Zahl zwischen 1 und 9999 eingeben!
+config_easing         = Art der Animation
+config_easing_swing   = Swing
+config_easing_linear  = Linear
+admin_header          = {PARAM1} Plugin Configuration
+admin_effect          = Animation
