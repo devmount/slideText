@@ -3,7 +3,7 @@ slideText
 
 A Plugin for moziloCMS 2.0
 
-This plugin draft can be used for easier moziloCMS plugin development.
+Generates content, that shows further content on click.
 
 ## Installation
 #### With moziloCMS installer
@@ -16,11 +16,11 @@ Installing a plugin manually requires FTP Access.
 - Go to the backend tab *Plugins* and activate the now listed new slideText plugin
 
 ## Syntax
-```{slideText|<param1>|<param2>}```
-Here comes the general description of the plugin tag.
+```{slideText|<toclick>|<toshow>}```
+Inserts clickable and toggable text.
 
-1. Parameter ```<param1>```: Short description of parameter 1.
-2. Parameter ```<param2>```: Short description of parameter 2.
+1. Parameter ```<toclick>```: Content to click at
+2. Parameter ```<toshow>```: Content to toggle
 
 ## License
 This Plugin is distributed under *GNU General Public License, Version 3* (see LICENSE).
