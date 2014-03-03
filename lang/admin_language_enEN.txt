@@ -1,5 +1,5 @@
-placeholder           = Returns the clickable content
-description           = Generates content, that shows further content on click.<br /><br /><span style='font-weight:bold'>Use:</span><br /><span style='font-family:monospace;margin:3px 3px; background-color:#eee;border:1px dotted #aaa;'>{slideText|toclick|toshow}</span> Inserts the given content. toclick stands for the content to click and toshow is the content to toggle<br /><br /><span style='font-weight:bold'>Documentation:</span><br />A detailed documentation can be found on <span style="font-style:italic;">www.devmount.de </span> (link above).
+tag_default           = Returns the clickable content
+description           = Generates content, that shows further content on click.<br /><br /><span style='font-weight:bold'>Use:</span><br /><span style='font-family:monospace;margin:3px 3px; background-color:#eee;border:1px dotted #aaa;'>{PluginDraft|params}</span> Inserts the given content.<br /><br /><span style='font-family:monospace;'>&lt;toclick&gt;: </span>Content to click at<br /><span style='font-family:monospace;'>&lt;toshow&gt;: </span>Content to toggle<br /><br /><span style='font-weight:bold'>Documentation:</span><br />A detailed documentation can be found on <span style="font-style:italic;">www.devmount.de </span> (link above).
 config_duration       = Duration of the animation in milliseconds
 config_duration_error = Please enter a number between 1 and 9999!
 config_easing         = Easing of the animation

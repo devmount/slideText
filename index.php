@@ -51,7 +51,7 @@ class slideText extends Plugin
     const PLUGIN_VERSION = 'v0.1.2014-03-03';
     const MOZILO_VERSION = '2.0';
     private $_plugin_tags = array(
-        'tag1' => '{slideText|toclick|toshow}',
+        'default' => '{slideText|toclick|toshow}',
     );
 
     const LOGO_URL = 'http://media.devmount.de/logo_pluginconf.png';
@@ -329,7 +329,7 @@ class slideText extends Plugin
             self::MOZILO_VERSION,
             $this->_admin_lang->getLanguageValue(
                 'description',
-                htmlspecialchars($this->_plugin_tags['tag1'])
+                htmlspecialchars($this->_plugin_tags['default'])
             ),
             self::PLUGIN_AUTHOR,
             self::PLUGIN_DOCU,
