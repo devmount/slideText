@@ -23,8 +23,8 @@ Inserts clickable and toggable text.
 2. Parameter ```<toshow>```: Content to toggle
 
 ## License
-This Plugin is distributed under *GNU General Public License, Version 3* (see LICENSE).
+This Plugin is distributed under *GNU General Public License, Version 3* (see LICENSE) or, at your choice, any further version.
 
 ## Documentation
 A detailed documentation and demo can be found on DEVMOUNT's website:
-http://devmount.de/Develop/Mozilo%20Plugins/slideText.html
+http://devmount.de/Develop/moziloCMS/Plugins/slideText.html
