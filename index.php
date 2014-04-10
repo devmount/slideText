@@ -46,7 +46,7 @@ class slideText extends Plugin
     // plugin information
     const PLUGIN_AUTHOR  = 'HPdesigner';
     const PLUGIN_DOCU
-        = 'http://devmount.de/Develop/Mozilo%20Plugins/slideText.html';
+        = 'http://devmount.de/Develop/moziloCMS/Plugins/slideText.html';
     const PLUGIN_TITLE   = 'slideText';
     const PLUGIN_VERSION = 'v0.1.2014-03-03';
     const MOZILO_VERSION = '2.0';
