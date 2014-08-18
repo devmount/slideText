@@ -133,7 +133,8 @@ class slideText extends Plugin
         $js = '';
         $js .= '<script type="text/javascript">
                     $(document).ready(function(){
-                        $(".question").click(function(event){
+                        $(".slideText").click(function(event){
+                            $(this).children(".question").toggleClass("opened");
                             $(this).children(".answere").slideToggle(
                                 "' . $conf['duration'] . '",
                                 "' . $conf['easing'] . '"
@@ -148,7 +149,8 @@ class slideText extends Plugin
 
         // build return content
         $content .= '
-            <div class="question">' . $question
+            <div class="slideText">'
+            . '<span class="question">' . $question . '</span>'
             . '<div class="answere">' . $answere . '</div>
             </div>
         ';

@@ -2,20 +2,40 @@
     slideText CSS styles
 */
 
-.question {
+.slideText {
     cursor: pointer;
     margin-bottom: 5px;
     color: #000;
     display: inline-block;
 }
 
-.question h3 {
+.slideText .question {
+    display: inline-block;
+    position: relative;
+}
+.slideText .question h3 {
     color: #000;
 }
 
-.question .answere {
+.slideText .question:after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 5px);
+    right: -15px;
+    height: 0;
+    width: 0;
+    border-left: 7px solid #888;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+.slideText .question.opened:after {
+    transform: rotate(90deg);
+    transition: transform 0.4s;
+}
+
+.slideText .answere {
     display: none;
-    margin-left: 20px;
     color: #666;
 }
 
