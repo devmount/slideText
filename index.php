@@ -105,6 +105,8 @@ class slideText extends Plugin
 
         // get params
         list($question, $answere) = explode('|', $value);
+        $question = trim($question);
+        $answere = trim($answere);
 
         // handle input
         if ($question == '') {
@@ -132,7 +134,7 @@ class slideText extends Plugin
         $js .= '<script type="text/javascript">
                     $(document).ready(function(){
                         $(".question").click(function(event){
-                            $(this).children("div").slideToggle(
+                            $(this).children(".answere").slideToggle(
                                 "' . $conf['duration'] . '",
                                 "' . $conf['easing'] . '"
                             );
@@ -147,7 +149,7 @@ class slideText extends Plugin
         // build return content
         $content .= '
             <div class="question">' . $question
-            . '<div>' . $answere . '</div>
+            . '<div class="answere">' . $answere . '</div>
             </div>
         ';
 
