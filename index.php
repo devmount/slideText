@@ -80,7 +80,7 @@ class slideText extends Plugin
             'swing',
             'select',
             array('swing','linear'),
-            false,
+            FALSE,
         ),
     );
 
@@ -104,15 +104,15 @@ class slideText extends Plugin
         );
 
         // get params
-        list($question, $answere) = $this->makeUserParaArray($value, false, '|');
+        list($question, $answere) = explode('|', $value);
 
         // handle input
-        if (trim($question) == '') {
+        if ($question == '') {
             return $this->throwError(
                 $this->_cms_lang->getLanguageValue('error_toclick')
             );
         }
-        if (trim($answere) == '') {
+        if ($answere == '') {
             return $this->throwError(
                 $this->_cms_lang->getLanguageValue('error_toshow')
             );
@@ -394,7 +394,7 @@ class slideText extends Plugin
      *
      * @return Array   Configuration
      */
-    protected function confSelect($description, $descriptions, $multiple = false)
+    protected function confSelect($description, $descriptions, $multiple = FALSE)
     {
         // required properties
         return array(
