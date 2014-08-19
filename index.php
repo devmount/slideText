@@ -11,7 +11,7 @@
  * @package  PHP_MoziloPlugins
  * @author   HPdesigner <mail@devmount.de>
  * @license  GPL v3+
- * @version  GIT: v0.1.2014-03-03
+ * @version  GIT: v0.2.2014-08-19
  * @link     https://github.com/devmount/slideText
  * @link     http://devmount.de/Develop/moziloCMS/Plugins/slideText.html
  * @see      The name of the LORD is a strong tower; the righteous run to it and are
@@ -48,7 +48,7 @@ class slideText extends Plugin
     const PLUGIN_DOCU
         = 'http://devmount.de/Develop/moziloCMS/Plugins/slideText.html';
     const PLUGIN_TITLE   = 'slideText';
-    const PLUGIN_VERSION = 'v0.1.2014-03-03';
+    const PLUGIN_VERSION = 'v0.2.2014-08-19';
     const MOZILO_VERSION = '2.0';
     private $_plugin_tags = array(
         'default' => '{slideText|toclick|toshow}',
