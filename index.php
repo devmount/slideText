@@ -137,9 +137,15 @@ class slideText extends Plugin
         $js = '';
         $js .= '<script type="text/javascript">
                     $(document).ready(function(){
-                        $(".slidetext").click(function(event){
-                            $(this).children(".question").children(".toggle-arrow").toggleClass("opened");
-                            $(this).children(".answere").slideToggle(
+                        $(".slidetext").click(function(event){';
+
+        // show toggle arrow depending on configuration
+        if ($conf['show_arrow'] == 'true') {
+            $js .= '$(this).children(".question").children(".toggle-arrow")
+                    .toggleClass("opened");';
+        }
+
+        $js .= '            $(this).children(".answere").slideToggle(
                                 "' . $conf['duration'] . '",
                                 "' . $conf['easing'] . '"
                             );
@@ -155,9 +161,15 @@ class slideText extends Plugin
         $content .= '
             <div class="slidetext">'
             . '<span class="question">'
-                . $question
-                . '<span class="toggle-arrow"></span>'
-            . '</span>'
+                . $question;
+
+        // show toggle arrow depending on configuration
+        if ($conf['show_arrow'] == 'true') {
+            $content .= '<span class="toggle-arrow"></span>';
+        }
+
+        $content .= '
+                </span>'
             . '<div class="answere">' . $answere . '</div>
             </div>
         ';
