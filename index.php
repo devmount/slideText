@@ -69,6 +69,10 @@ class slideText extends Plugin
      *      select   => default, type, descriptions, multiselect
      */
     private $_confdefault = array(
+        'show_arrow' => array(
+            true,
+            'check',
+        ),
         'duration' => array(
             '400',
             'text',
@@ -276,6 +280,18 @@ class slideText extends Plugin
         </li>
         <li class="mo-in-ul-li ui-widget-content slidetext-admin-li">
             <div class="slidetext-admin-subheader">'
+            . $this->_admin_lang->getLanguageValue('admin_display')
+            . '</div>
+            <div style="margin-bottom:5px;">
+                {show_arrow_checkbox}
+                {show_arrow_description}
+                <span class="slidetext-admin-default">
+                    [' . $this->_confdefault['show_arrow'][0] .']
+                </span>
+            </div>
+        </li>
+        <li class="mo-in-ul-li ui-widget-content slidetext-admin-li">
+            <div class="slidetext-admin-subheader">'
             . $this->_admin_lang->getLanguageValue('admin_effect')
             . '</div>
             <div style="margin-bottom:5px;">
@@ -390,6 +406,118 @@ class slideText extends Plugin
     }
 
     /**
+     * creates configuration for textareas
+     *
+     * @param string $description Label
+     * @param string $cols        Number of columns
+     * @param string $rows        Number of rows
+     * @param string $regex       Regular expression for allowed input
+     * @param string $regex_error Wrong input error message
+     *
+     * @return Array  Configuration
+     */
+    protected function confTextarea(
+        $description,
+        $cols = '',
+        $rows = '',
+        $regex = '',
+        $regex_error = ''
+    ) {
+        // required properties
+        $conftext = array(
+            'type' => 'textarea',
+            'description' => $description,
+        );
+        // optional properties
+        if ($cols != '') {
+            $conftext['cols'] = $cols;
+        }
+        if ($rows != '') {
+            $conftext['rows'] = $rows;
+        }
+        if ($regex != '') {
+            $conftext['regex'] = $regex;
+        }
+        if ($regex_error != '') {
+            $conftext['regex_error'] = $regex_error;
+        }
+        return $conftext;
+    }
+
+    /**
+     * creates configuration for password fields
+     *
+     * @param string  $description Label
+     * @param string  $maxlength   Maximum number of characters
+     * @param string  $size        Size
+     * @param string  $regex       Regular expression for allowed input
+     * @param string  $regex_error Wrong input error message
+     * @param boolean $saveasmd5   Safe password as md5 (recommended!)
+     *
+     * @return Array   Configuration
+     */
+    protected function confPassword(
+        $description,
+        $maxlength = '',
+        $size = '',
+        $regex = '',
+        $regex_error = '',
+        $saveasmd5 = true
+    ) {
+        // required properties
+        $conftext = array(
+            'type' => 'text',
+            'description' => $description,
+        );
+        // optional properties
+        if ($maxlength != '') {
+            $conftext['maxlength'] = $maxlength;
+        }
+        if ($size != '') {
+            $conftext['size'] = $size;
+        }
+        if ($regex != '') {
+            $conftext['regex'] = $regex;
+        }
+        $conftext['saveasmd5'] = $saveasmd5;
+        return $conftext;
+    }
+
+    /**
+     * creates configuration for checkboxes
+     *
+     * @param string $description Label
+     *
+     * @return Array  Configuration
+     */
+    protected function confCheck($description)
+    {
+        // required properties
+        return array(
+            'type' => 'checkbox',
+            'description' => $description,
+        );
+    }
+
+    /**
+     * creates configuration for radio buttons
+     *
+     * @param string $description  Label
+     * @param string $descriptions Array Single item labels
+     *
+     * @return Array Configuration
+     */
+    protected function confRadio($description, $descriptions)
+    {
+        // required properties
+        return array(
+            'type' => 'select',
+            'description' => $description,
+            'descriptions' => $descriptions,
+        );
+    }
+
+    /**
      * creates configuration for select fields
      *
      * @param string  $description  Label
@@ -398,7 +526,7 @@ class slideText extends Plugin
      *
      * @return Array   Configuration
      */
-    protected function confSelect($description, $descriptions, $multiple = FALSE)
+    protected function confSelect($description, $descriptions, $multiple = false)
     {
         // required properties
         return array(
