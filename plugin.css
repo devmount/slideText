@@ -17,8 +17,7 @@
     color: #000;
 }
 
-.slidetext .question:after {
-    content: "";
+.slidetext .question .toggle-arrow {
     position: absolute;
     top: calc(50% - 5px);
     right: -15px;
@@ -29,7 +28,7 @@
     border-bottom: 5px solid transparent;
 }
 
-.slidetext .question.opened:after {
+.slidetext .question .toggle-arrow.opened {
     transform: rotate(90deg);
     transition: transform 0.4s;
 }
