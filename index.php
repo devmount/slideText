@@ -137,7 +137,7 @@ class slideText extends Plugin
         $js = '';
         $js .= '<script type="text/javascript">
                     $(document).ready(function(){
-                        $(".slideText").click(function(event){
+                        $(".slidetext").click(function(event){
                             $(this).children(".question").toggleClass("opened");
                             $(this).children(".answere").slideToggle(
                                 "' . $conf['duration'] . '",
@@ -153,7 +153,8 @@ class slideText extends Plugin
 
         // build return content
         $content .= '
-            <div class="slideText">'
+            <div class="slidetext">'
+            . '<span class="question">' . $question . '</span>'
             . '<span class="question">' . $question . '</span>'
             . '<div class="answere">' . $answere . '</div>
             </div>
@@ -538,19 +539,25 @@ class slideText extends Plugin
     }
 
     /**
-     * throws styled error message
+     * throws styled message
      *
-     * @param string $text Content of error message
+     * @param string $type Type of message ('ERROR', 'SUCCESS')
+     * @param string $text Content of message
      *
      * @return string HTML content
      */
-    protected function throwError($text)
+    protected function throwMessage($text, $type)
     {
-        return '<div class="' . self::PLUGIN_TITLE . 'Error">'
-            . '<div>' . $this->_cms_lang->getLanguageValue('error') . '</div>'
+        return '<div class="'
+                . strtolower(self::PLUGIN_TITLE . '-' . $type)
+            . '">'
+            . '<div>'
+                . $this->_cms_lang->getLanguageValue(strtolower($type))
+            . '</div>'
             . '<span>' . $text. '</span>'
             . '</div>';
     }
+
 }
 
 ?>

@@ -2,22 +2,22 @@
     slideText CSS styles
 */
 
-.slideText {
+.slidetext {
     cursor: pointer;
     margin-bottom: 5px;
     color: #000;
     display: inline-block;
 }
 
-.slideText .question {
+.slidetext .question {
     display: inline-block;
     position: relative;
 }
-.slideText .question h3 {
+.slidetext .question h3 {
     color: #000;
 }
 
-.slideText .question:after {
+.slidetext .question:after {
     content: "";
     position: absolute;
     top: calc(50% - 5px);
@@ -29,30 +29,71 @@
     border-bottom: 5px solid transparent;
 }
 
-.slideText .question.opened:after {
+.slidetext .question.opened:after {
     transform: rotate(90deg);
     transition: transform 0.4s;
 }
 
-.slideText .answere {
+.slidetext .answere {
     display: none;
     color: #666;
 }
 
-.slideTextError {
+/* NOTICE message */
+.slidetext-notice {
+    display: table;
+    margin: 2px 0;
+    border: 1px solid #777;
+    background-color: #eee;
+}
+.slidetext-notice div {
+    display: table-cell;
+    padding: 2px 6px;
+    color: white;
+    background-color: #777;
+    height: inherit;
+}
+.slidetext-notice span {
+    display: table-cell;
+    padding: 2px 4px;
+    color: #777;
+}
+
+/* SUCCESS message */
+.slidetext-success {
+    display: table;
+    margin: 2px 0;
+    border: 1px solid #2a0;
+    background-color: #efe;
+}
+.slidetext-success div {
+    display: table-cell;
+    padding: 2px 6px;
+    color: white;
+    background-color: #2a0;
+    height: inherit;
+}
+.slidetext-success span {
+    display: table-cell;
+    padding: 2px 4px;
+    color: #2a0;
+}
+
+/* ERROR message */
+.slidetext-error {
     display: table;
     margin: 2px 0;
     border: 1px solid #f33;
     background-color: #fee;
 }
-.slideTextError div {
+.slidetext-error div {
     display: table-cell;
     padding: 2px 6px;
     color: white;
     background-color: #f33;
     height: inherit;
 }
-.slideTextError span {
+.slidetext-error span {
     display: table-cell;
     padding: 2px 4px;
     color: #f33;
