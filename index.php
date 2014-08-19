@@ -134,24 +134,26 @@ class slideText extends Plugin
 
         // include jquery and slideText javascript
         $syntax->insert_jquery_in_head('jquery');
+
+        // read slideText.css
         $js = '';
-        $js .= '<script type="text/javascript">
-                    $(document).ready(function(){
-                        $(".slidetext").click(function(event){';
-
-        // show toggle arrow depending on configuration
-        if ($conf['show_arrow'] == 'true') {
-            $js .= '$(this).children(".question").children(".toggle-arrow")
-                    .toggleClass("opened");';
+        $lines = file($this->PLUGIN_SELF_DIR . 'js/slideText.js');
+        foreach ($lines as $line_num => $line) {
+            $js .= trim($line);
         }
+        $js = str_replace(
+            array(
+                '<<TOGGLE-ARROW>>',
+                '<<CONFIGURATION>>'
+            ),
+            array(
+                ($conf['show_arrow'] == 'true') ? 1 : 0,
+                '"' . $conf['duration'] . '","' . $conf['easing'] . '"'
+            ),
+            $js
+        );
+        $js = '<script type="text/javascript">' . $js . '</script>';
 
-        $js .= '            $(this).children(".answere").slideToggle(
-                                "' . $conf['duration'] . '",
-                                "' . $conf['easing'] . '"
-                            );
-                        });
-                    });
-                </script>';
         $syntax->insert_in_head($js);
 
         // initialize return content, begin plugin content
