@@ -1,5 +1,6 @@
 tag_default           = Gibt den anzuklickenden Inhalt zurück.
 description           = Generiert Inhalt, der beim Anklicken verborgenen Inhalt ausklappt.<br /><br /><span style='font-weight:bold'>Nutzung:</span><br /><span style='font-family:monospace;margin:3px 3px; background-color:#eee;border:1px dotted #aaa;'>{PARAM1}</span>  Fügt den gewünschten Inhalt ein.<br /><br /><span style='font-family:monospace;'>&lt;toclick&gt;: </span>Der Inhalt, welcher angeklickt werden soll<br /><span style='font-family:monospace;'>&lt;toshow&gt;: </span>Den Inhalt, der aus- bzw. eingeklappt werden soll.<br /><br /><span style='font-weight:bold'>Dokumentation:</span><br />Eine ausführliche Dokumentation ist auf <span style="font-style:italic">www.devmount.de</span> zu finden (siehe obenstehender Link).
+on_devmount           = auf devmount.de
 config_show_arrow     = Pfeil zum Ausklappen anzeigen
 config_duration       = Dauer der Animation in Millisekunden
 config_duration_error = Bitte eine Zahl zwischen 1 und 9999 eingeben!
