@@ -374,7 +374,7 @@ class slideText extends Plugin
             self::MOZILO_VERSION,
             $this->_admin_lang->getLanguageValue(
                 'description',
-                htmlspecialchars($this->_plugin_tags['default'])
+                htmlspecialchars($this->_plugin_tags['default'], ENT_COMPAT, 'UTF-8')
             ),
             self::PLUGIN_AUTHOR,
             array(
