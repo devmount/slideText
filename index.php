@@ -12,7 +12,7 @@
  * @author   DEVMOUNT <mail@devmount.de>
  * @license  GPL v3+
  * @version  GIT: v0.2.2014-08-19
- * @link     https://github.com/devmount/slideText
+ * @link     https://github.com/devmount-mozilo/slideText
  * @link     http://devmount.de/Develop/moziloCMS/Plugins/slideText.html
  * @see      The name of the LORD is a strong tower; the righteous run to it and are
  *           safe.
@@ -35,7 +35,7 @@ if (!defined('IS_CMS')) {
  * @package  PHP_MoziloPlugins
  * @author   DEVMOUNT <mail@devmount.de>
  * @license  GPL v3+
- * @link     https://github.com/devmount/slideText
+ * @link     https://github.com/devmount-mozilo/slideText
  */
 class slideText extends Plugin
 {
