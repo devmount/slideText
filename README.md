@@ -16,7 +16,9 @@ Installing a plugin manually requires FTP Access.
 - Go to the backend tab *Plugins* and activate the now listed new slideText plugin
 
 ## Syntax
-```{slideText|<toclick>|<toshow>}```
+```
+{slideText|<toclick>|<toshow>}
+```
 Inserts clickable and toggable text.
 
 1. Parameter ```<toclick>```: Content to click at
@@ -27,4 +29,4 @@ This Plugin is distributed under *GNU General Public License, Version 3* (see LI
 
 ## Documentation
 A detailed documentation and demo can be found on DEVMOUNT's website:
-http://devmount.de/Develop/moziloCMS/Plugins/slideText.html
+http://t.devmount.de/Develop/moziloCMS/Plugins/slideText.html
