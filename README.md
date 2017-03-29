@@ -1,6 +1,4 @@
-slideText
-===========
-
+# slideText
 A Plugin for moziloCMS 2.0
 
 Generates content, that shows further content on click.
@@ -28,5 +26,5 @@ Inserts clickable and toggable text.
 This Plugin is distributed under *GNU General Public License, Version 3* (see LICENSE) or, at your choice, any further version.
 
 ## Documentation
-A detailed documentation and demo can be found on DEVMOUNT's website:
-http://t.devmount.de/Develop/moziloCMS/Plugins/slideText.html
+A detailed documentation and demo can be found here:  
+https://github.com/devmount-mozilo/slideText/wiki/Dokumentation
