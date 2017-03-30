@@ -12,8 +12,7 @@
  * @author   DEVMOUNT <mail@devmount.de>
  * @license  GPL v3+
  * @version  GIT: v0.2.2014-08-19
- * @link     https://github.com/devmount-mozilo/slideText
- * @link     http://devmount.de/Develop/moziloCMS/Plugins/slideText.html
+ * @link     https://github.com/devmount-mozilo/slideText/wiki/Dokumentation
  * @see      The name of the LORD is a strong tower; the righteous run to it and are
  *           safe.
  *            - The Bible
@@ -49,7 +48,7 @@ class slideText extends Plugin
     const PLUGIN_VERSION = 'v0.2.2014-08-19';
     const MOZILO_VERSION = '2.0';
     const PLUGIN_DOCU
-        = 'http://devmount.de/Develop/moziloCMS/Plugins/slideText.html';
+        = 'https://github.com/devmount-mozilo/slideText/wiki/Dokumentation';
 
     private $_plugin_tags = array(
         'default' => '{slideText|toclick|toshow}',
